@@ -30,7 +30,8 @@
                                     <td> {{ $cliente->nome }} </td>
                                     <td> {{ $cliente->email }} </td>
                                     <td> {{ $cliente->endereco }} </td>
-                                    <td> 
+                                    <td>
+                                        <a class="btn btn-default" href="{{route('cliente.detalhe', $cliente->id)}}"> Detalhar </a> 
                                         <a class="btn btn-default" href="{{route('cliente.editar', $cliente->id)}}"> Editar </a>
                                         <a class="btn btn-danger" href="javascript:(confirm('Deseja realmete excluir?') ? window.location.href='{{route('cliente.deletar', $cliente->id)}}' : '')"> Excluir </a>
                                     </td>
